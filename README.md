@@ -3,7 +3,7 @@ Reference: Sol Han, Dohyeon Kim, Youngshin Kim and Sung Ho Yoon. "Genome-scale m
 
 These codes and data were used to construct iSH1474 and replicate the results presented in the reference paper.
 
-Last update: 2023-12-02
+Last update: 2023-12-05
 This repository was created by Sol Han (onepine529@konkuk.ac.kr), Department of Bioscience and Biotechnology, Konkuk University, Seoul, Republic of Korea.
 
 #### Software dependencies

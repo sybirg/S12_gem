@@ -51,7 +51,7 @@ This repository consists of the following sections:
 * Figure S1. Determination of GAM and NGAM in iSH1474 using chemostat data of P. putida S12
 * Table S3. Biomass equation of iSH1474
 
-## [3. Validation of model predicitons for carbon utilization](3_Carbon_simulation)
+## [3. Validation of model predictions for carbon utilization](3_Carbon_simulation)
 
 #### Python Jupyter notebook (carbon_simulation.ipynb) for 
 * Calculation of 203 sole carbon source availability and the accuracy compared to experimental results in metabolic models
@@ -81,7 +81,7 @@ This repository consists of the following sections:
 * Figure 4C. Comparison of flux distribution in the central carbon metabolism of S12 from in vivo measurements and in silico predictions
 * Figure S3.  Comparison of flux distribution in the central carbon metabolism of P. putida S12 from in vivo measurements and in silico predictions
 
-## [5. Dynamic flux balance analysisA](5_dFBA)
+## [5. Dynamic flux balance analysis](5_dFBA)
 
 #### Matlab code (dFBA.ipynb) for 
 * Dynamic flux balance analysis (dFBA) using iSH1474 for time profiles of biomass and glucose concentration in aerobic batch growth of S12 on glucose as the sole carbon source (Figure 1 in Isken et al. Applied and Environmental Microbiology, 65:2631-2635, 1999)

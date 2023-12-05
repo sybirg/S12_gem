@@ -38,7 +38,7 @@ This repository consists of the following sections:
 ## [2. Generation of biomass equation](2_Biomass_equation)
 
 #### Python Jupyter notebook (biomass_equation.ipynb) for
-* Calcuation of GAM and NGAM
+* Calculation of GAM and NGAM
 * Calculation of compositions of amino acids, deoxynucleotides (dNTPs), and nucleotides (NTPs) 
 
 #### Input folder contains
@@ -93,7 +93,7 @@ This repository consists of the following sections:
 #### Related materials in the reference paper
 * Figure 4D. Dynamic flux balance analysis using iSH1474 for time profiles of biomass and glucose concentration in aerobic batch growth of S12 on glucose as the sole carbon source
 
-## [6. Gene essentialiy analysis](6_Gene_essentiality)
+## [6. Gene essentiality analysis](6_Gene_essentiality)
 
 #### Python Jupyter notebook (gene_essentiality.ipynb) for 
 * Comparison of predicted essential genes of P. putida S12 and KT2440 growing in a minimal glucose medium

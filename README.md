@@ -21,7 +21,7 @@ This repository was created by Sol Han (onepine529@konkuk.ac.kr), Department of 
 
 This repository consists of the following sections:
 
-## [1. GEM construction](1_GEM_construction)
+## [1. Construction of draft GEM](1_Draft_GEM_construction)
 
 #### Python Jupyter notebook (gem_construction.ipynb) for
 * Construction of the metabolic network model of S12 (iSH1474)
@@ -37,33 +37,27 @@ This repository consists of the following sections:
 #### Related materials in the reference paper 
 * Figure 1. Workflow of the reconstruction of the metabolic network model of P. putida S12
 
-## [2. Generation of biomass equation](2_Biomass_equation)
+## [2. Calculation of GAM and NGAM](2_GAM_NGAM_calculation)
 
-#### Python Jupyter notebook (biomass_equation.ipynb) for
+#### Python Jupyter notebook (calc_gam_ngam.ipynb) for
 * Calculation of GAM and NGAM
-* Calculation of compositions of amino acids, deoxynucleotides (dNTPs), and nucleotides (NTPs) 
 
 #### Input folder contains
-* s12_protein_sequence.txt: RefSeq protein sequence file of P. putida S12
-* s12.xlsx: Excel file that organizes the contents of RefSeq genome annotation file of P. putida S12 by gene
-* biomass_composition.xlsx: Excel file of calculated molar weight for biomass components using table S3 in the reference paper
 * iSH1474.xml: GEM of P. putida S12
 
 #### Related materials in the reference paper
 * Figure S1. Determination of GAM and NGAM in iSH1474 using chemostat data of P. putida S12
-* Table S3. Biomass equation of iSH1474
 
 ## [3. Validation of model predictions for carbon utilization](3_Carbon_simulation)
 
 #### Python Jupyter notebook (carbon_simulation.ipynb) for 
-* Calculation of 203 sole carbon source availability and the accuracy compared to experimental results in metabolic models
-* In vivo measurements: result of 190 PM test (BIOLOG) and 13 solvents as sole carbon source (Table 1 in Weber et al. Appl Environ Microbiol, 56:1347-1351,1990)
-* In silico predictions: the growth simulations using iSH1474 (S12) or iJN1462 (KT2440)
+* Comparison of model predictions and experimental growths on 190 carbon sources contained in the phenotype microarray and 13 organic compounds 
+* Model predictions: the growth simulations using iSH1474 (S12) or iJN1462 (KT2440)
 
 #### Input folder contains
 * iJN1463.xml: GEM of P. putida KT2440
 * iSH1474.xml: GEM of P. putida S12
-* PM_result.xlsx: Excel file that contains 203 carbon sources and growth results of each carbon
+* PM_result.xlsx: Phenotype microarray (PM) results
 
 #### Related materials in the reference paper
 * Figure 4A. Comparison of growth predictions using iSH1474 and experimental growths on 190 carbon sources contained in the phenotype microarray and 13 organic compounds

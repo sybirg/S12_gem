@@ -55,9 +55,9 @@ This repository consists of the following sections:
 * Model predictions: the growth simulations using iSH1474 (S12) or iJN1462 (KT2440)
 
 #### Input folder contains
+* PM_result.xlsx: Phenotype microarray (PM) results
 * iJN1463.xml: GEM of P. putida KT2440
 * iSH1474.xml: GEM of P. putida S12
-* PM_result.xlsx: Phenotype microarray (PM) results
 
 #### Related materials in the reference paper
 * Figure 4A. Comparison of growth predictions using iSH1474 and experimental growths on 190 carbon sources contained in the phenotype microarray and 13 organic compounds

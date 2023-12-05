@@ -1,5 +1,5 @@
 # iSH1474: Genome-scale metabolic model (GEM) of Pseudomonas putida S12
-Reference: Sol Han, Dohyeon Kim, Youngshin Kim and Sung Ho Yoon. Genome-scale metabolic network model and phenome of solvent-tolerant Pseudomonas putida S12"
+Reference: Sol Han, Dohyeon Kim, Youngshin Kim and Sung Ho Yoon. "Genome-scale metabolic network model and phenome of solvent-tolerant Pseudomonas putida S12"
 
 These codes and data were used to construct iSH1474 and replicate the results presented in the reference paper.
 

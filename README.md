@@ -16,6 +16,8 @@ This repository was created by Sol Han (onepine529@konkuk.ac.kr), Department of 
 [The followings are just required for dFBA (section 5)]
 * COBRA Matlab toolbox v3.0.4 (https://opencobra.github.io/cobratoolbox/)
 * Matlab v9.6 (https://www.mathworks.com/)
+* Matlab engine for Python v3.7 (https://kr.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
+* Matlab kernel for Jupyter v0.17.1 (https://github.com/Calysto/matlab_kernel)
 
 This repository consists of the following sections:
 

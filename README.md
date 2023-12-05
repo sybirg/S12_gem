@@ -42,9 +42,9 @@ This repository consists of the following sections:
 * Calculation of compositions of amino acids, deoxynucleotides (dNTPs), and nucleotides (NTPs) 
 
 #### Input folder contains
-* S12 protein sequence.txt: ?
-* S12.xlsx: ?
-* biomass composition.xlsx: ?
+* S12 protein sequence.txt: RefSeq protein sequence file of P. putida S12
+* S12.xlsx: Excel file that organizes the contents of RefSeq genome annotation file of P. putida S12 by gene
+* biomass composition.xlsx: calculated molar weight for biomass components using supple table S3
 * iSH1474.xml: GEM of P. putida S12
 
 #### Related materials in the reference paper
@@ -54,11 +54,12 @@ This repository consists of the following sections:
 ## [3. Validation of model predicitons for carbon utilization](3_Carbon_simulation)
 
 #### Python Jupyter notebook (carbon_simulation.ipynb) for 
-* ?
+* Calculation of 203 single carbon source availability and accuracy compared to experimental results in metabolic models
 
 #### Input folder contains
 * iJN1463.xml: GEM of P. putida KT2440
 * iSH1474.xml: GEM of P. putida S12
+* PM result.xlsx: Excel file that contains 203 carbon sources and growth results of each carbon
 
 #### Related materials in the reference paper
 * Figure 4A. Comparison of growth predictions using iSH1474 and experimental growths on 190 carbon sources contained in the phenotype microarray and 13 organic compounds

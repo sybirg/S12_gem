@@ -13,7 +13,7 @@ This repository was created by Sol Han (onepine529@konkuk.ac.kr), Department of 
 * Biopython v1.73 (https://biopython.org/)
 * OpenPyXL v3.0.3 (https://openpyxl.readthedocs.io/)
 
-[The followings are just required for dFBA (secion 5)]
+[The followings are just required for dFBA (section 5)]
 * COBRA Matlab toolbox v3.0.4 (https://opencobra.github.io/cobratoolbox/)
 * Matlab v9.6 (https://www.mathworks.com/)
 

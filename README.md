@@ -1,80 +1,115 @@
-# Genome-scale metabolic network model and phenome of solvent-tolerant Pseudomonas putida S12
+# iSH1474: Genome-scale metabolic model (GEM) of Pseudomonas putida S12
+Reference: Sol Han, Dohyeon Kim, Youngshin Kim and Sung Ho Yoon. Genome-scale metabolic network model and phenome of solvent-tolerant Pseudomonas putida S12"
 
-These python and MATLAB codes were used to reconstruction of draft model and metabolic flux simulation in this study.
-
-#### software dependencies
-* python 3.10.9
-* cobrapy 0.29.0
-* solver = glpk
+These codes and data were used to construct iSH1474 and replicate the results presented in the reference paper.
 
 Last update: 2023-12-02
 This repository was created by Sol Han (onepine529@konkuk.ac.kr), Department of Bioscience and Biotechnology, Konkuk University, Seoul, Republic of Korea.
 
+#### Software dependencies
+* Python 3 (> v3.7) (https://www.python.org/)
+* COBRApy v0.29.0 (https://opencobra.github.io/cobrapy/)
+* GLPK linear programming solver included in COBRA
+* Biopython v1.73 (https://biopython.org/)
+* OpenPyXL v3.0.3 (https://openpyxl.readthedocs.io/)
 
-This repository of S12_gem consists of five source code parts:
+[The followings are just required for dFBA (secion 5)]
+* COBRA Matlab toolbox v3.0.4 (https://opencobra.github.io/cobratoolbox/)
+* Matlab v9.6 (https://www.mathworks.com/)
 
-## Biomass adjustment
-Between P. putida S12 and KT2440, there are genetically and phenotypically differences and such differences were reflected in the biomass equation of the model and corrected specifically for S12.
+This repository consists of the following sections:
 
-In order to apply the changes to the model using the corresponding code, the molar fractions must be calculated in the following process.
-* The calculation formula is provided in the corresponding Excel file: 'Supplementary Table S3. iSH1474 biomass'
-* In 'Macromolecular' tab, enter the experimentally (or in theory) discovered fraction of each macromolecue.
-* We modified the information on the three parts of DNA, RNA, and aminoic acid, and calculated the molar ratio of each. Enter the 'Number of bases', 'RNA bases', and 'Total codons per aa'.
-* In 'Biomass_WT' tab, automatically-calculated 'mmol/gDW (Calc.)' column is used to make 'biomass composition.xlsx'
+## [1. GEM construction](1_GEM_construction)
 
-More detailed information are annotated in the code and publication.
-we provide example files.
+#### Python Jupyter notebook (gem_construction.ipynb) for
+* Construction of the metabolic network model of S12 (iSH1474)
 
+#### Input folder contains
+* NC_002947.4.gb: RefSeq genome annotation file of P. putida KT2440
+* NZ_CP009974.1.gb: RefSeq genome annotation file of P. putida S12
+* blastp_ortho.xlsx: BLASTP search results
+* edgar_ortho.xlsx: EDGAR search results
+* iJN1463.xml: GEM of P. putida KT2440
+* iPAE1146.xml: GEM of P. aeruginosa PAO1
 
-## Figure 1: model reconstruction
-The reconstruction of draft model using homologous search files, metabolic models and genome of reference strains.
+#### Related materials in the reference paper 
+* Figure 1. Workflow of the reconstruction of the metabolic network model of P. putida S12
 
-Preparations are as follows:
-* Genome files of target- and reference organism
-* Homologus search files using EDGAR and BLASTP software
-* Reference genome-scale metabolic model (GEM)
+## [2. Generation of biomass equation](2_Biomass_equation)
 
-If reference GEMs have old locus tag, change the locus tag of orthologous data to the old locus tag of the GEMs
+#### Python Jupyter notebook (biomass_equation.ipynb) for
+* Calcuation of GAM and NGAM
+* Calculation of compositions of amino acids, deoxynucleotides (dNTPs), and nucleotides (NTPs) 
 
-Input GEMs with orthologous data. And get reactions from reference GEMs.
+#### Input folder contains
+* S12 protein sequence.txt: ?
+* S12.xlsx: ?
+* biomass composition.xlsx: ?
+* iSH1474.xml: GEM of P. putida S12
 
-The script was written in Python 3.7.
+#### Related materials in the reference paper
+* Figure S1. Determination of GAM and NGAM in iSH1474 using chemostat data of P. putida S12
+* Table S3. Biomass equation of iSH1474
 
-The dependent packages are as follows:
-* COBRApy (https://opencobra.github.io/cobrapy)
-* Biopython (https://biopython.org)
-* OpenPyXL (https://openpyxl.readthedocs.io/en/stable)
+## [3. Validation of model predicitons for carbon utilization](3_Carbon_simulation)
 
-More detailed information are annotated in the code file and we provide example files.
-As a result, P. putida S12 has 1,349 metabolic genes as homologous with P. putida KT2440 and 2,842 associated metabolic reactions were retrived from gem of KT2440. And 18 homologs of P. putida S12 were identified in the P. aeruginosa PAO1, which were not observed in the KT2440 GEM, and their 31 associated metabolic reactions were contained to draft. 
+#### Python Jupyter notebook (carbon_simulation.ipynb) for 
+* ?
 
+#### Input folder contains
+* iJN1463.xml: GEM of P. putida KT2440
+* iSH1474.xml: GEM of P. putida S12
 
-## Figure 4C, supplementary figure 3: central metabolism simulation
-We provide a script to simulate central carbon metabolism using the completed model and reference model.
-The result is provided pandas table and gives the Pearson correlation coefficient value in the last row.
+#### Related materials in the reference paper
+* Figure 4A. Comparison of growth predictions using iSH1474 and experimental growths on 190 carbon sources contained in the phenotype microarray and 13 organic compounds
 
-To simulate the flux using this code, costum the file link which you download the model.
+## [4. Flux simulation](4_Flux_simulation)
 
+#### Python Jupyter notebook (flux_simulation.ipynb) for
+* Comparison of flux distribution in the central carbon metabolism of P. putida S12 from in vivo measurements and in silico predictions
+* In vivo measurements: the fluxes from 13C-based metabolic flux analysis of S12 (Figure 5B in Blank et al. The FEBS Journal, 275:5173-5190, 2008)
+* In silico predictions: the flux simulations using iSH1474 (S12) or iJN1462 (KT2440)
 
-## Supplementary figure 4: essential gene
-Knockout is performed on all genes included in the model, and if the growth is less than 5% of the normal state, it is determined that there is no growth and predict the genes essential for growth.
+#### Input folder contains
+* iJN1463.xml: GEM of P. putida KT2440
+* iSH1474.xml: GEM of P. putida S12
 
-To find the essential genes using this code, costum the file link which you download the model.
+#### Related materials in the reference paper
+* Figure 4C. Comparison of flux distribution in the central carbon metabolism of S12 from in vivo measurements and in silico predictions
+* Figure S3.  Comparison of flux distribution in the central carbon metabolism of P. putida S12 from in vivo measurements and in silico predictions
 
+## [5. Dynamic flux balance analysisA](5_dFBA)
 
-## Dynamic simulation
-Dynamic flux balance analysis (dFBA) simulation
+#### Matlab code (dFBA.ipynb) for 
+* Dynamic flux balance analysis (dFBA) using iSH1474 for time profiles of biomass and glucose concentration in aerobic batch growth of S12 on glucose as the sole carbon source (Figure 1 in Isken et al. Applied and Environmental Microbiology, 65:2631-2635, 1999)
 
-Preparations are as follows:
-* Genome-scale metabolic model (GEM)
+#### Input folder contains
+* batch_culture.txt: time profiles of biomass and glucose concentration in aerobic batch growth of S12 on glucose as the sole carbon source (Figure 1 in Isken et al. Applied and Environmental Microbiology, 65:2631-2635, 1999)
+* iSH1474.xml: GEM of P. putida S12
 
-The “dynamicFBA” function is performed to simulate dFBA
+#### Related materials in the reference paper
+* Figure 4D. Dynamic flux balance analysis using iSH1474 for time profiles of biomass and glucose concentration in aerobic batch growth of S12 on glucose as the sole carbon source
 
-The script was written in MATLAB v9.6.
+## [6. Gene essentialiy analysis](6_Gene_essentiality)
 
-The dependent packages are as follows:
-* The COnstraint-Based Reconstruction and Analysis Toolbox v3.0.4
+#### Python Jupyter notebook (gene_essentiality.ipynb) for 
+* Comparison of predicted essential genes of P. putida S12 and KT2440 growing in a minimal glucose medium
 
-More detailed information are annotated in the code file.
+#### Input folder contains
+* iJN1463.xml: GEM of P. putida KT2440
+* iSH1474.xml: GEM of P. putida S12
 
-Using this code, we ran dFBA simulation of iSH1474 (pseudomonas putida S12 GEM).
+#### Related materials in the reference paper
+* Figure S4. Comparison of predicted essential genes of P. putida S12 and KT2440 growing in a minimal glucose medium
+* Table S7. Predicted essential genes of S12 using iSH1474 for aerobic growth on glucose as the sole carbon source
+
+## [7. Simulation of the utilization of organic solvents](7_Solvent_simulation)
+
+#### Python Jupyter notebook (solvent_simulation.ipynb) for 
+* Investigation of the maximum theoretical metabolic capacity of S12 growing on toxic organic solvents
+
+#### Input folder contains
+* iSH1474.xml: GEM of P. putida S12
+
+#### Related materials in the reference paper
+* Figure 5. Model predictions of growth capability of S12 growing aerobically on heptanoate, octanol, styrene, and glucose

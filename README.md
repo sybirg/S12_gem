@@ -44,7 +44,7 @@ This repository consists of the following sections:
 #### Input folder contains
 * s12_protein_sequence.txt: RefSeq protein sequence file of P. putida S12
 * s12.xlsx: Excel file that organizes the contents of RefSeq genome annotation file of P. putida S12 by gene
-* biomass_composition.xlsx: Excel file of calculated molar weight for biomass components using supple table S3
+* biomass_composition.xlsx: Excel file of calculated molar weight for biomass components using table S3 in the reference paper
 * iSH1474.xml: GEM of P. putida S12
 
 #### Related materials in the reference paper

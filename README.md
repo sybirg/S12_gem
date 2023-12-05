@@ -44,7 +44,7 @@ This repository consists of the following sections:
 #### Input folder contains
 * S12 protein sequence.txt: RefSeq protein sequence file of P. putida S12
 * S12.xlsx: Excel file that organizes the contents of RefSeq genome annotation file of P. putida S12 by gene
-* biomass composition.xlsx: Excel file that calculated molar weight for biomass components using supple table S3
+* biomass composition.xlsx: Excel file of calculated molar weight for biomass components using supple table S3
 * iSH1474.xml: GEM of P. putida S12
 
 #### Related materials in the reference paper
@@ -54,7 +54,9 @@ This repository consists of the following sections:
 ## [3. Validation of model predicitons for carbon utilization](3_Carbon_simulation)
 
 #### Python Jupyter notebook (carbon_simulation.ipynb) for 
-* Calculation of 203 single carbon source availability and accuracy compared to experimental results in metabolic models
+* Calculation of 203 sole carbon source availability and the accuracy compared to experimental results in metabolic models
+* In vivo measurements: result of 190 PM test (BIOLOG) and 13 solvents as sole carbon source (Table 1 in Weber et al. Appl Environ Microbiol, 56:1347-1351,1990)
+* In silico predictions: the growth simulations using iSH1474 (S12) or iJN1462 (KT2440)
 
 #### Input folder contains
 * iJN1463.xml: GEM of P. putida KT2440

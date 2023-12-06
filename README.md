@@ -33,6 +33,7 @@ This repository consists of the following sections:
 * edgar_ortho.xlsx: EDGAR search results
 * iJN1463.xml: GEM of P. putida KT2440
 * iPAE1146.xml: GEM of P. aeruginosa PAO1
+* raven_model.xml: RAVEN GEM of P. putida S12
 
 #### Related materials in the reference paper 
 * Figure 1. Workflow of the reconstruction of the metabolic network model of P. putida S12

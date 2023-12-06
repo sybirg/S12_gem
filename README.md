@@ -23,7 +23,7 @@ This repository consists of the following sections:
 
 ## [1. Construction of draft GEM](1_Draft_GEM_construction)
 
-#### Python Jupyter notebook (gem_construction.ipynb) for
+#### Python Jupyter notebook (draft_gem_construction.ipynb) for
 * Construction of the metabolic network model of S12 (iSH1474)
 
 #### Input folder contains

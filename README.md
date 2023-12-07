@@ -27,8 +27,8 @@ These codes and data were used to construct iSH1474 and replicate the results pr
 * NC_002947.4.gb: RefSeq genome annotation file of P. putida KT2440
 * NZ_CP009974.1.faa: Protein sequences file of P. putida S12
 * NZ_CP009974.1.gb: RefSeq genome annotation file of P. putida S12
-* blastp_ortho.xlsx: BLASTP search results
-* edgar_ortho.xlsx: EDGAR search results
+* blastp_homol.xlsx: BLASTP search results
+* edgar_homol.xlsx: EDGAR search results
 * iJN1463.xml: GEM of P. putida KT2440
 * iPAE1146.xml: GEM of P. aeruginosa PAO1
 * raven_model.xml: RAVEN GEM of P. putida S12
